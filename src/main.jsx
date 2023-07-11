@@ -1,14 +1,22 @@
+// core - react
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom"
-import './index.css'
-// Importar página / componente creado de hola mundo
-import HolaMundo from "./components/HolaMundo"
 
+
+// components
+import App from './App.jsx' // main app
+import HolaMundo from "./components/HolaMundo" // router example
+import Calama from "./components/Calama.jsx" // router example
+
+// components: ejemplos 01
+import EstadosInicio from "./components/ej01_estados/EstadosInicio"
+import EstadosInput from "./components/ej01_estados/EstadosInput.jsx"
+
+// app routes
 const router = createBrowserRouter([
     {
         path: "/",
@@ -17,6 +25,19 @@ const router = createBrowserRouter([
     {
         path: "/hola",
         element: <HolaMundo />
+    },
+    {
+        path: "/ciudad",
+        element: <Calama />
+    },
+    // routes: ejemplos 01
+    {
+        path: "/ejemplos/01/estados-inicial",
+        element: <EstadosInicio />
+    },
+    {
+        path: "/ejemplos/01/estados-input",
+        element: <EstadosInput />
     }
 ])
 
