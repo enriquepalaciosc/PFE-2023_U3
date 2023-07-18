@@ -1,5 +1,5 @@
 // core - react
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 // View
 const EstadosInput = () => {
@@ -15,7 +15,12 @@ const EstadosInput = () => {
             <p>Por favor ingrese un nombre para realizar un saludo en tiempo real</p>
 
             <label htmlFor="saludo">Nombre</label><br />
-            <input id="saludo" name="saludo" type="text" onChange={handleNombreChange} value={nombre} />
+            <input
+                id="saludo"
+                name="saludo"
+                type="text"
+                onChange={handleNombreChange}
+                value={nombre} />
 
             <h3 style={{ color: "red" }}>Un saludo para: {nombre}</h3>
         </>

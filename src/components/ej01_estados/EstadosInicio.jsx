@@ -7,6 +7,7 @@ const EstadosInicio = () => {
     const [conteo, setConteo] = useState(0)
 
     // handler de botón
+    // function handleConteoClick(evento) { .. }
     const handleConteoClick = (evento) => {
         setConteo(conteo + 1)
     }

@@ -16,6 +16,9 @@ import Calama from "./components/Calama.jsx" // router example
 import EstadosInicio from "./components/ej01_estados/EstadosInicio"
 import EstadosInput from "./components/ej01_estados/EstadosInput.jsx"
 
+// components: ejercicio 01
+import Ejercicio01 from "./components/ejercicios/Ejercicio01.jsx";
+
 // app routes
 const router = createBrowserRouter([
     {
@@ -38,6 +41,11 @@ const router = createBrowserRouter([
     {
         path: "/ejemplos/01/estados-input",
         element: <EstadosInput />
+    },
+    // routes: Ejercicio 01 taller presencial
+    {
+        path: "/ejercicio01",
+        element: <Ejercicio01 />
     }
 ])
 
