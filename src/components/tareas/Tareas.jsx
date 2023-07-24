@@ -1,5 +1,6 @@
 // Core - react
 import React, { useState } from 'react'
+import AgregarTareaFragment from "./fragments/AgregarTareaFragment"
 
 // Arreglo de ejemplo de objetos para inicializar
 const listaEjemplo = [
@@ -53,11 +54,13 @@ const Tareas = () => {
                 <div className='col-12'>
                     <h1>Tareas</h1>
                 </div>
-                <div className='col-12'>
-                    <label htmlFor="nombre-tarea">Tarea</label>
-                    <input type="text" className='form-control' id='nombre-tarea' value={nombreTarea} onChange={handleModificarTarea} />
-                    <button type='button' className='btn btn-primary mt-3' onClick={handleAgregarTarea}>Añadir</button>
-                </div>
+
+                <AgregarTareaFragment
+                    nombreTarea={nombreTarea}
+                    handleModificarTarea={handleModificarTarea}
+                    handleAgregarTarea={handleAgregarTarea}
+                />
+
                 <div className='col-12 mt-4'>
                     <h3>Lista de tareas</h3>
                 </div>
@@ -71,7 +74,7 @@ const Tareas = () => {
                                         <button
                                             type="button"
                                             className="btn btn-outline-danger btn-sm ms-1"
-                                            onClick={() => handleEliminarTarea(tarea.id)}
+                                            onClick={()=> handleEliminarTarea(tarea.id)}
                                         >Eliminar</button>
                                     </li>
                                 );
